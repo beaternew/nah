@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style>
+<style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}</style><script>window.BS_SUPABASE = { url: 'https://pcoftlqlbgwbrqhwujgm.supabase.co', key: 'sb_publishable_x9fa_uSuxd_SzSmBdohclA_tms95hua' };</script>
 <title>โปรเจกต์โบนัสสุกี้</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,6 +155,53 @@ button.hrow:hover .lbl{color:var(--accent)}
 .spill.doing{color:var(--warn);border-color:currentColor}
 .spill.stuck{color:var(--accent);border-color:currentColor}
 @media (max-width:640px){.ttable .hide-sm{display:none}}
+.layers-map{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.85rem;margin:0 0 14px}
+.layers-map span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 12px}
+.layers-map i{font-style:normal;color:var(--muted)}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:16px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+.mapgroups{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}
+.mapgroup{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.mapgroup h3{margin:0 0 8px;font:600 .98rem/1.4 var(--f-display)}
+.mapfiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,12.5rem),1fr));gap:6px}
+.mapfile{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 8px;align-items:center;text-align:left;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 9px;cursor:pointer}
+.mapfile:hover{border-color:var(--accent)}
+.mapfile.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.mapfile.dim{opacity:.35}
+.mapfile.orphan{border-style:dashed}
+.mapfile code{font:.8rem/1.4 var(--f-mono);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mapfile .who{font-size:.75rem;color:var(--muted)}
+.mbar{grid-column:1/-1;height:4px;border-radius:999px;background:var(--soft);overflow:hidden}
+.mbar i{display:block;height:100%;background:var(--accent)}
+.mapdetail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 24px);overflow:auto}
+@media (max-width:900px){.mapdetail{position:static;max-height:none}}
+.mapdetail .ghead h2,.mapdetail .ghead .meta{overflow-wrap:anywhere}
+.ownline{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between;padding:2px 0}
+.specwrap{margin:6px 0 18px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px;min-width:0}
+.spech{margin:10px 0 0;font:600 1.05rem/1.4 var(--f-display)}
+.specfile{min-width:0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.specfile>summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;padding:10px 14px}
+.specfile>summary code{font:600 .86rem/1.4 var(--f-mono)}
+.specfile .cnt{font-size:.8rem;color:var(--muted)}
+.spec{padding:0 14px 12px}
+.spec h5{margin:12px 0 4px;font:600 .8rem/1.4 var(--f-body);letter-spacing:.04em;color:var(--muted)}
+.specdesc{margin:2px 0;font-size:.86rem;color:var(--muted)}
+.tbox.small{max-height:none}
+.spect td,.spect th{padding:6px 9px;font-size:.84rem}
+.spect code{font:.8rem/1.4 var(--f-mono);white-space:nowrap}
+ul.meth{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.86rem}
+ul.meth code{font:.8rem/1.5 var(--f-mono);overflow-wrap:anywhere;margin-right:8px}
+ul.meth span{color:var(--muted)}
+.conns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+@media (max-width:640px){.conns{grid-template-columns:minmax(0,1fr)}}
+.conncol{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--card);min-width:0}
+.conncol h4{margin:0;font:600 .92rem/1.4 var(--f-display)}
+ul.connlist{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:4px}
+.connbtn{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;width:100%;text-align:left;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 9px;cursor:pointer}
+.connbtn:hover{border-color:var(--accent)}
+.connbtn code{font:.8rem/1.4 var(--f-mono)}
+.connbtn .who{font-size:.78rem;color:var(--muted)}
+.mapfile:focus-visible,.connbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .finish{text-align:center;padding:16px;border-radius:12px;background:var(--ok-soft);color:var(--ok);font-weight:600;margin-top:12px}
 </style>
 <style>
@@ -297,7 +344,7 @@ button.hrow:hover .lbl{color:var(--accent)}
     <div>
       <div class="eyebrow">BONUS SUKI · JAVA SWING</div>
       <h1>โปรเจกต์โบนัสสุกี้</h1>
-      <p class="sub">ทุกอย่างของโปรเจกต์ในหน้าเดียว: ดูว่าทั้งทีมถึงไหนแล้ว · ทำงานของตัวเองทีละขั้นพร้อม checkpoint (บันทึก % ลงชีทให้) · เปิดคู่มือตั้งชื่อ ฐานข้อมูล และโค้ดแม่แบบ</p>
+      <p class="sub">ทุกอย่างของโปรเจกต์ในหน้าเดียว: ดูว่าทั้งทีมถึงไหนแล้ว · ทำงานของตัวเองทีละขั้นพร้อม checkpoint (ทั้งทีมเห็นตรงกัน) · เปิดคู่มือตั้งชื่อ ฐานข้อมูล และโค้ดแม่แบบ</p>
     </div>
     <div class="sync" aria-live="polite"><span class="dot" id="syncDot"></span><span id="syncText">กำลังเชื่อม Google Sheets…</span></div>
   </header>
@@ -307,6 +354,7 @@ button.hrow:hover .lbl{color:var(--accent)}
   <div class="tabs" role="tablist" aria-label="หน้า">
     <button class="tab" role="tab" type="button" id="tab-overview" aria-controls="overview" data-tab="overview" aria-selected="true">ภาพรวมทีม</button>
     <button class="tab" role="tab" type="button" id="tab-guide" aria-controls="guidePage" data-tab="guidePage" aria-selected="false">ไกด์ทำงาน</button>
+    <button class="tab" role="tab" type="button" id="tab-map" aria-controls="mapTab" data-tab="mapTab" aria-selected="false">แผนผังโปรเจกต์</button>
     <button class="tab" role="tab" type="button" id="tab-manual" aria-controls="manualTab" data-tab="manualTab" aria-selected="false">คู่มือโปรเจกต์</button>
   </div>
   <div class="chips" id="people" role="group" aria-label="เลือกคน"></div>
@@ -346,6 +394,15 @@ button.hrow:hover .lbl{color:var(--accent)}
       <div class="empty">เลือกงานจากรายการทางซ้ายเพื่อเริ่มไกด์</div>
     </main>
   </div>
+  </section>
+
+  <section id="mapTab" role="tabpanel" aria-labelledby="tab-map" hidden>
+    <p class="howcalc">ทุกไฟล์ในโปรเจกต์ BonusSuki แยกตาม package · สีของแถบคือความคืบหน้าของงานที่สร้างไฟล์นั้น · กดไฟล์เพื่อดูว่าต้องมีอะไร ใครทำ และต่อกับไฟล์ไหน · เลือกชื่อคนด้านบนเพื่อไฮไลต์ไฟล์ของคนนั้น</p>
+    <div class="layers-map" aria-hidden="true"><span>ui</span><i>→</i><span>service</span><i>→</i><span>dao</span><i>→</i><span>model / bonus_suki.db</span></div>
+    <div class="mapgrid">
+      <div id="mapGroups" class="mapgroups"></div>
+      <aside id="mapDetail" class="panel mapdetail" aria-live="polite"><div class="empty">กดไฟล์ทางซ้ายเพื่อดูรายละเอียด</div></aside>
+    </div>
   </section>
 
   <section id="manualTab" role="tabpanel" aria-labelledby="tab-manual" hidden>
@@ -2320,6 +2377,7 @@ public double calcDiscount(String promotionId, Bill bill, double total) {
 </div>
 
 <script>
+const TABLES = {"Member": {"table": "Member", "pk": ["Member_ID"], "cols": [{"col": "Member_ID", "field": "memberId", "type": "String", "comp": "txtMemberId", "null": false, "th": "รหัสสมาชิก"}, {"col": "Member_Name", "field": "memberName", "type": "String", "comp": "txtMemberName", "null": false, "th": "ชื่อ-นามสกุลสมาชิก"}, {"col": "Member_PhoneNo", "field": "memberPhoneNo", "type": "String", "comp": "txtMemberPhoneNo", "null": false, "th": "เบอร์โทรศัพท์สมาชิก (ห้ามซ้ำ)"}, {"col": "Member_Address", "field": "memberAddress", "type": "String", "comp": "txaMemberAddress", "null": true, "th": "ที่อยู่สมาชิก"}, {"col": "Point_Balance", "field": "pointBalance", "type": "int", "comp": "spnPointBalance", "null": false, "th": "คะแนนสะสม"}]}, "DiningTable": {"table": "Dining_Table", "pk": ["Table_ID"], "cols": [{"col": "Table_ID", "field": "tableId", "type": "String", "comp": "txtTableId", "null": false, "th": "รหัสโต๊ะ"}, {"col": "Table_Name", "field": "tableName", "type": "String", "comp": "txtTableName", "null": false, "th": "หมายเลขโต๊ะ"}, {"col": "Table_Zone", "field": "tableZone", "type": "String", "comp": "cmbTableZone", "null": true, "th": "โซนที่ตั้งของโต๊ะ"}, {"col": "Table_Size", "field": "tableSize", "type": "int", "comp": "spnTableSize", "null": false, "th": "ขนาดโต๊ะ (จำนวนที่นั่งสูงสุด)"}, {"col": "Table_Status", "field": "tableStatus", "type": "String", "comp": "cmbTableStatus", "null": false, "th": "สถานะโต๊ะ (ว่าง / กำลังใช้งาน / รอเช็คบิล)"}]}, "Promotion": {"table": "Promotion", "pk": ["Promotion_ID"], "cols": [{"col": "Promotion_ID", "field": "promotionId", "type": "String", "comp": "txtPromotionId", "null": false, "th": "รหัสโปรโมชั่น"}, {"col": "End_Date", "field": "endDate", "type": "String", "comp": "txtEndDate", "null": false, "th": "วันที่สิ้นสุดโปรโมชั่น"}, {"col": "Start_Date", "field": "startDate", "type": "String", "comp": "txtStartDate", "null": false, "th": "วันที่เริ่มโปรโมชั่น"}, {"col": "Pro_Name", "field": "proName", "type": "String", "comp": "txtProName", "null": false, "th": "ชื่อโปรโมชั่น"}, {"col": "Detail", "field": "detail", "type": "String", "comp": "txaDetail", "null": true, "th": "รายละเอียดและเงื่อนไขโปรโมชั่น"}, {"col": "Number_People", "field": "numberPeople", "type": "int", "comp": "spnNumberPeople", "null": false, "th": "จำนวนคนตามเงื่อนไขโปรโมชั่น"}]}, "Product": {"table": "Product", "pk": ["Product_ID"], "cols": [{"col": "Product_ID", "field": "productId", "type": "String", "comp": "txtProductId", "null": false, "th": "รหัสสินค้า"}, {"col": "Product_Name", "field": "productName", "type": "String", "comp": "txtProductName", "null": false, "th": "ชื่อสินค้า"}, {"col": "Amount", "field": "amount", "type": "double", "comp": "txtAmount", "null": false, "th": "ราคาขายต่อหน่วย (บาท)"}, {"col": "Product_Type", "field": "productType", "type": "String", "comp": "cmbProductType", "null": false, "th": "ประเภทสินค้า (เช่น เมนูอาหาร, น้ำซุป, แพ็กเกจ)"}]}, "StockItem": {"table": "Stock_Item", "pk": ["Stock_Item_ID"], "cols": [{"col": "Stock_Item_ID", "field": "stockItemId", "type": "String", "comp": "txtStockItemId", "null": false, "th": "รหัสวัตถุดิบ"}, {"col": "Unit", "field": "unit", "type": "String", "comp": "txtUnit", "null": false, "th": "หน่วยนับของวัตถุดิบ (เช่น กก., แพ็ค)"}, {"col": "Item_Name", "field": "itemName", "type": "String", "comp": "txtItemName", "null": false, "th": "ชื่อวัตถุดิบ"}, {"col": "Category", "field": "category", "type": "String", "comp": "cmbCategory", "null": true, "th": "หมวดหมู่วัตถุดิบ"}, {"col": "Current_Stock", "field": "currentStock", "type": "double", "comp": "txtCurrentStock", "null": false, "th": "จำนวนวัตถุดิบคงเหลือในคลัง"}, {"col": "Reorder_Point", "field": "reorderPoint", "type": "double", "comp": "txtReorderPoint", "null": false, "th": "ระดับสินค้าคงเหลือที่ต้องเริ่มสั่งซื้อใหม่"}]}, "Vendor": {"table": "Vendor", "pk": ["Vendor_ID"], "cols": [{"col": "Vendor_ID", "field": "vendorId", "type": "String", "comp": "txtVendorId", "null": false, "th": "รหัสผู้จัดจำหน่าย"}, {"col": "Vendor_Name", "field": "vendorName", "type": "String", "comp": "txtVendorName", "null": false, "th": "ชื่อผู้จัดจำหน่าย"}, {"col": "Address", "field": "address", "type": "String", "comp": "txaAddress", "null": true, "th": "ที่อยู่ผู้จัดจำหน่าย"}, {"col": "PhoneNo", "field": "phoneno", "type": "String", "comp": "txtPhoneno", "null": true, "th": "เบอร์โทรศัพท์ผู้จัดจำหน่าย"}]}, "Employee": {"table": "Employee", "pk": ["Emp_ID"], "cols": [{"col": "Emp_ID", "field": "empId", "type": "String", "comp": "txtEmpId", "null": false, "th": "รหัสพนักงาน"}, {"col": "Emp_Type", "field": "empType", "type": "String", "comp": "cmbEmpType", "null": false, "th": "ประเภทพนักงาน (Full-time / Part-time)"}, {"col": "Emp_Address", "field": "empAddress", "type": "String", "comp": "txaEmpAddress", "null": true, "th": "ที่อยู่พนักงาน"}, {"col": "Emp_Name", "field": "empName", "type": "String", "comp": "txtEmpName", "null": false, "th": "ชื่อ-นามสกุลพนักงาน"}, {"col": "Emp_PhoneNo", "field": "empPhoneNo", "type": "String", "comp": "txtEmpPhoneNo", "null": false, "th": "เบอร์โทรศัพท์พนักงาน"}, {"col": "Salary_Base", "field": "salaryBase", "type": "double", "comp": "txtSalaryBase", "null": false, "th": "ฐานเงินเดือนพนักงาน"}]}, "LotDetail": {"table": "Lot_Detail", "pk": ["Lot_Number"], "cols": [{"col": "Lot_Number", "field": "lotNumber", "type": "String", "comp": "txtLotNumber", "null": false, "th": "หมายเลขล็อตสินค้า"}, {"col": "Exp_Date", "field": "expDate", "type": "String", "comp": "txtExpDate", "null": false, "th": "วันหมดอายุของล็อตนั้น"}]}, "Payroll": {"table": "Payroll", "pk": ["Payroll_ID"], "cols": [{"col": "Payroll_ID", "field": "payrollId", "type": "String", "comp": "txtPayrollId", "null": false, "th": "รหัสรายการจ่ายเงินเดือน"}, {"col": "Pay_Date", "field": "payDate", "type": "String", "comp": "txtPayDate", "null": false, "th": "วันที่จ่ายเงินเดือน"}, {"col": "OT", "field": "ot", "type": "double", "comp": "txtOt", "null": false, "th": "ค่าล่วงเวลา"}, {"col": "Deduction", "field": "deduction", "type": "double", "comp": "txtDeduction", "null": false, "th": "ยอดหักเงิน (ประกันสังคม ขาด ลา สาย)"}, {"col": "Total_Amount", "field": "totalAmount", "type": "double", "comp": "txtTotalAmount", "null": false, "th": "ยอดเงินจ่ายสุทธิ (Net Pay)"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "รหัสพนักงานที่ได้รับเงินเดือน"}]}, "Bill": {"table": "Bill", "pk": ["Order_ID"], "cols": [{"col": "Order_ID", "field": "orderId", "type": "String", "comp": "txtOrderId", "null": false, "th": "รหัสบิล"}, {"col": "Total_Price", "field": "totalPrice", "type": "double", "comp": "txtTotalPrice", "null": false, "th": "ราคารวมก่อนหักส่วนลด"}, {"col": "Discount_Amount", "field": "discountAmount", "type": "double", "comp": "txtDiscountAmount", "null": false, "th": "ส่วนลดรวมของบิล"}, {"col": "Received_Amount", "field": "receivedAmount", "type": "Double", "comp": "txtReceivedAmount", "null": true, "th": "จำนวนเงินที่รับจากลูกค้า"}, {"col": "Payment_Date", "field": "paymentDate", "type": "String", "comp": "txtPaymentDate", "null": true, "th": "วันที่ชำระเงิน"}, {"col": "Payment_Type", "field": "paymentType", "type": "String", "comp": "cmbPaymentType", "null": true, "th": "ประเภทการชำระเงิน (เงินสด / QR Code)"}, {"col": "Of_Date", "field": "ofDate", "type": "String", "comp": "txtOfDate", "null": false, "th": "วันที่ใช้บริการโต๊ะ"}, {"col": "Start_Time", "field": "startTime", "type": "String", "comp": "txtStartTime", "null": false, "th": "เวลาเริ่มใช้โต๊ะ"}, {"col": "End_Time", "field": "endTime", "type": "String", "comp": "txtEndTime", "null": true, "th": "เวลาสิ้นสุดการใช้โต๊ะ"}, {"col": "Amount_Member", "field": "amountMember", "type": "int", "comp": "spnAmountMember", "null": false, "th": "จำนวนผู้เข้าใช้บริการ"}, {"col": "Promo_DateTime", "field": "promoDateTime", "type": "String", "comp": "txtPromoDateTime", "null": true, "th": "วัน-เวลาที่ใช้โปรโมชั่นกับบิล"}, {"col": "Promo_Amount_Member", "field": "promoAmountMember", "type": "Integer", "comp": "spnPromoAmountMember", "null": true, "th": "จำนวนคนที่ใช้สิทธิ์โปรโมชั่น"}, {"col": "Member_ID", "field": "memberId", "type": "String", "comp": "cmbMember", "null": true, "th": "รหัสสมาชิกเจ้าของบิล (ค่าว่างได้ถ้าไม่ใช่สมาชิก)"}, {"col": "Table_ID", "field": "tableId", "type": "String", "comp": "cmbDiningTable", "null": false, "th": "รหัสโต๊ะที่ใช้บริการ"}, {"col": "Promotion_ID", "field": "promotionId", "type": "String", "comp": "cmbPromotion", "null": true, "th": "รหัสโปรโมชั่นที่ใช้ (ค่าว่างได้)"}]}, "WorkTime": {"table": "Work_Time", "pk": ["Work_Date", "Emp_ID"], "cols": [{"col": "Work_Date", "field": "workDate", "type": "String", "comp": "txtWorkDate", "null": false, "th": "วันที่ทำงาน"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "รหัสพนักงานเจ้าของเวลาทำงาน"}, {"col": "Entry_Time", "field": "entryTime", "type": "String", "comp": "txtEntryTime", "null": false, "th": "เวลาเข้างาน"}, {"col": "End_Time", "field": "endTime", "type": "String", "comp": "txtEndTime", "null": true, "th": "เวลาออกงาน"}, {"col": "Incentive_Amount", "field": "incentiveAmount", "type": "Double", "comp": "txtIncentiveAmount", "null": true, "th": "เบี้ยขยัน"}, {"col": "Payroll_ID", "field": "payrollId", "type": "String", "comp": "cmbPayroll", "null": true, "th": "รหัสรายการจ่ายเงินเดือนที่รวมวันทำงานนี้"}]}, "Expense": {"table": "Expense", "pk": ["Expense_ID"], "cols": [{"col": "Expense_ID", "field": "expenseId", "type": "String", "comp": "txtExpenseId", "null": false, "th": "รหัสค่าใช้จ่าย"}, {"col": "Expense_Date", "field": "expenseDate", "type": "String", "comp": "txtExpenseDate", "null": false, "th": "วันที่เกิดค่าใช้จ่าย"}, {"col": "Receipt_Image", "field": "receiptImage", "type": "String", "comp": "txtReceiptImage + btnBrowseReceiptImage", "null": true, "th": "ตำแหน่งไฟล์รูปใบเสร็จ (path/URL)"}, {"col": "Expense_Type", "field": "expenseType", "type": "String", "comp": "cmbExpenseType", "null": false, "th": "ประเภทค่าใช้จ่าย (คงที่/ผันแปร)"}, {"col": "Expense_Amount", "field": "expenseAmount", "type": "double", "comp": "txtExpenseAmount", "null": false, "th": "จำนวนเงินค่าใช้จ่าย"}, {"col": "Expense_Category", "field": "expenseCategory", "type": "String", "comp": "cmbExpenseCategory", "null": false, "th": "หมวดหมู่ค่าใช้จ่าย (ค่าน้ำ-ไฟ, ค่าเช่า ฯลฯ)"}, {"col": "Description", "field": "description", "type": "String", "comp": "txaDescription", "null": true, "th": "รายละเอียดเพิ่มเติม"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "รหัสพนักงานที่บันทึกค่าใช้จ่าย"}]}, "BillProduct": {"table": "Bill_Product", "pk": ["Order_ID", "Product_ID"], "cols": [{"col": "Order_ID", "field": "orderId", "type": "String", "comp": "(ไม่มี ใช้บิลที่เปิดอยู่)", "null": false, "th": "รหัสบิล"}, {"col": "Product_ID", "field": "productId", "type": "String", "comp": "cmbProduct", "null": false, "th": "รหัสสินค้าที่สั่ง"}, {"col": "Use_DateTime", "field": "useDateTime", "type": "String", "comp": "txtUseDateTime", "null": false, "th": "วัน-เวลาที่สั่งสินค้า"}, {"col": "Unit", "field": "unit", "type": "int", "comp": "spnUnit", "null": false, "th": "จำนวนหน่วยที่สั่ง (จาน, ถ้วย, หม้อ)"}]}, "Bom": {"table": "BOM", "pk": ["Product_ID", "Stock_Item_ID"], "cols": [{"col": "Product_ID", "field": "productId", "type": "String", "comp": "cmbProduct", "null": false, "th": "รหัสสินค้า"}, {"col": "Stock_Item_ID", "field": "stockItemId", "type": "String", "comp": "cmbStockItem", "null": false, "th": "รหัสวัตถุดิบ"}, {"col": "Quantity", "field": "quantity", "type": "double", "comp": "txtQuantity", "null": false, "th": "ปริมาณวัตถุดิบที่ใช้ต่อสินค้า 1 หน่วย"}]}, "StockImport": {"table": "Import", "pk": ["Stock_Item_ID", "Vendor_ID", "Emp_ID"], "cols": [{"col": "Stock_Item_ID", "field": "stockItemId", "type": "String", "comp": "cmbStockItem", "null": false, "th": "รหัสวัตถุดิบ"}, {"col": "Vendor_ID", "field": "vendorId", "type": "String", "comp": "cmbVendor", "null": false, "th": "รหัสผู้จัดจำหน่าย"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "รหัสพนักงานที่รับของเข้าคลัง"}, {"col": "Import_DateTime", "field": "importDateTime", "type": "String", "comp": "txtImportDateTime", "null": false, "th": "วัน-เวลาที่รับของเข้าคลัง"}, {"col": "Number", "field": "number", "type": "double", "comp": "txtNumber", "null": false, "th": "จำนวนที่นำเข้า"}, {"col": "Cost_Price", "field": "costPrice", "type": "double", "comp": "txtCostPrice", "null": false, "th": "ราคาต้นทุนต่อหน่วย"}, {"col": "Lot_Number", "field": "lotNumber", "type": "String", "comp": "cmbLotDetail", "null": false, "th": "หมายเลขล็อตสินค้า"}]}, "UserAccount": {"table": "User_Account", "pk": ["User_ID"], "cols": [{"col": "User_ID", "field": "userId", "type": "String", "comp": "txtUserId", "null": false, "th": "รหัสบัญชีผู้ใช้ เช่น U001"}, {"col": "Username", "field": "username", "type": "String", "comp": "txtUsername", "null": false, "th": "ชื่อล็อกอิน (ห้ามซ้ำ)"}, {"col": "Password", "field": "password", "type": "String", "comp": "txtPassword", "null": false, "th": "รหัสผ่าน"}, {"col": "Role", "field": "role", "type": "String", "comp": "cmbRole", "null": false, "th": "ผู้จัดการ / พนักงาน"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "พนักงานเจ้าของบัญชี"}]}, "CheckStock": {"table": "Check_Stock", "pk": ["Check_ID"], "cols": [{"col": "Check_ID", "field": "checkId", "type": "String", "comp": "txtCheckId", "null": false, "th": "รหัสรอบตรวจนับ เช่น C001"}, {"col": "Check_DateTime", "field": "checkDateTime", "type": "String", "comp": "txtCheckDateTime", "null": false, "th": "วัน-เวลาที่ตรวจนับ"}, {"col": "Emp_ID", "field": "empId", "type": "String", "comp": "cmbEmployee", "null": false, "th": "พนักงานที่ตรวจนับ"}]}, "CheckStockDetail": {"table": "Check_Stock_Detail", "pk": ["Check_ID", "Stock_Item_ID"], "cols": [{"col": "Check_ID", "field": "checkId", "type": "String", "comp": "cmbCheckStock", "null": false, "th": "รอบตรวจนับ"}, {"col": "Stock_Item_ID", "field": "stockItemId", "type": "String", "comp": "cmbStockItem", "null": false, "th": "วัตถุดิบที่นับ"}, {"col": "System_Qty", "field": "systemQty", "type": "double", "comp": "txtSystemQty", "null": false, "th": "จำนวนในระบบก่อนนับ (Current_Stock ตอนนั้น)"}, {"col": "Counted_Qty", "field": "countedQty", "type": "double", "comp": "txtCountedQty", "null": false, "th": "จำนวนที่นับได้จริง"}]}};
 // ===== เนื้อหาไกด์: ทุกงานในแท็บ plan =====
 // ไกด์บอก "ต้องมีอะไร · ทำไม · เช็กยังไงว่าผ่าน" และให้แค่โค้ดชิ้นเล็ก (หัวเมธอด, SQL บรรทัดเดียว) ไม่ให้ทั้งไฟล์
 
@@ -2650,6 +2708,246 @@ function guideFor(taskId, module) {
   const intro = T[tpl] ? `${{ dao: 'ชั้น model + DAO + service', crud: 'ชั้น service ที่หน้าจอเรียก (CRUD)', ui: 'หน้าจอ CRUD' }[tpl]} ของ${ENT[arg].th} (ตาราง ${ENT[arg].table} · ชีทเรียก ${ENT[arg].sheetName})` : null;
   return { key: slug, tpl, steps, intro, guessed };
 }
+// ===== แผนผังโปรเจกต์: ทุกไฟล์ · เจ้าของงาน · สเปก · ใช้อะไร / ใครใช้ =====
+// task = key ของงานในชีท ("Task ID|ชื่องาน") ตัวแรกคือเจ้าของหลัก · uses = ชื่อไฟล์ (ไม่มี .java) ที่ไฟล์นี้เรียกใช้
+
+const SWING = { txt: 'JTextField', txa: 'JTextArea', cmb: 'JComboBox', spn: 'JSpinner', lbl: 'JLabel', btn: 'JButton', tbl: 'JTable',
+  scr: 'JScrollPane', pnl: 'JPanel', tgl: 'JToggleButton', grp: 'ButtonGroup', prg: 'JProgressBar', chk: 'JCheckBox' };
+const swingOf = (name) => (name === 'txtPassword' ? 'JPasswordField' : SWING[(name.match(/^[a-z]+/) || [''])[0]] || 'JComponent');
+const C = (name, what) => ({ name, type: swingOf(name), what });
+const M = (sig, does) => ({ sig, does });
+
+// เจ้าของงานตามชีท (ใช้ตอนยังโหลดชีท/ฐานข้อมูลไม่ได้)
+const OWNER = { '1': 'โอ๊ต', '1-1': 'โอ๊ต', '1-2': 'โอ๊ต', '1-3': 'โอ๊ต', '1-4': 'โอ๊ต', '1-5|Main Menu UI': 'เปรม', '1-5|Receipt DAO,Service': 'นุ',
+  '1-6': 'นุ', '1-7': 'นุ', '1-8': 'นุ', '1-9': 'นุ', '1-10': 'นุ', '1-11': 'บิ๊ก', '2': 'บาส', '2-1': 'บาส', '2-2': 'บาส', '3': 'บาส', '3-1': 'บาส',
+  '3-2': 'บาส', '3-3': 'บาส', '3-4': 'บาส', '3-5': 'บาส', '3-6': 'เต้', '3-7': 'เต้', '4': 'นิว', '4-1': 'นิว', '4-2': 'นิว', '5': 'ต๊ะ', '5-1': 'ต๊ะ',
+  '5-2': 'ต๊ะ', '6': 'เปรม', '6-3': 'เปรม', '6-4': 'เปรม', '7': 'ต๊ะ', '7-1': 'ต๊ะ', '7-2': 'ต๊ะ', '8': 'เต้', '9': 'เต้', '10': 'เปรม', '10-1': 'เปรม',
+  '11': 'บิ๊ก', '11-1': 'บิ๊ก', '11-2': 'บิ๊ก', '12': 'นิว', '12-1': 'นิว', '12-2': 'นิว', '13': 'นุ', '18': 'เต้' };
+const ownerFallback = (key) => OWNER[key] || OWNER[key.split('|')[0]] || '';
+
+const PKG = { helper: 'helper', model: 'model', dao: 'dao', service: 'service', ui: 'ui', comp: 'ui/component', root: '(package หลัก)', sql: 'sql/' };
+const PM_FILES = [];
+function addFile(name, pkg, o) { PM_FILES.push(Object.assign({ name, pkg, uses: [], tasks: [], spec: {} }, o)); }
+
+// ---------- สเปกอัตโนมัติจากตาราง ----------
+function modelSpec(cls) {
+  const t = TABLES[cls];
+  return {
+    fields: t.cols.map((c) => ({ name: c.field, type: c.type, from: c.col + (c.null ? ' (NULL ได้)' : '') })),
+    methods: [
+      M(`public ${cls}(${t.cols.map((c) => c.type + ' ' + c.field).join(', ')})`, 'constructor แบบเต็ม'),
+      M(`public ${cls}(...)`, 'constructor ที่ไม่มีรหัส (รหัสสร้างตอน save)'),
+      M(`public ${cls}()`, 'constructor ว่าง ใช้ใน fromRS'),
+      M(`get/set × ${t.cols.length} คู่`, 'Ctrl+I → Getter and Setter'),
+      M(`public static ${cls} fromRS(ResultSet rs) throws SQLException`, 'อ่าน 1 แถวจากผล SELECT'),
+      M('public String toString()', 'ข้อความที่ JComboBox แสดง'),
+    ],
+    count: `${t.cols.length} field · 3 constructor · ${t.cols.length * 2} getter/setter · fromRS · toString`,
+  };
+}
+function daoSpec(cls, extras, composite) {
+  const pk = TABLES[cls].pk.map((k) => 'String ' + TABLES[cls].cols.find((c) => c.col === k).field).join(', ');
+  const base = composite
+    ? [M(`public ${cls} get(${pk})`, 'หา 1 แถวด้วย PK ทุกคอลัมน์ ไม่พบคืน null'), M(`public List<${cls}> getAll()`, 'ทุกแถว'),
+      M(`public ${cls} save(${cls} obj)`, 'INSERT'), M(`public ${cls} update(${cls} obj)`, 'UPDATE ตาม PK'), M(`public int delete(${cls} obj)`, 'DELETE ตาม PK คืนจำนวนแถว')]
+    : [M(`public ${cls} get(String id)`, 'หา 1 แถวด้วยรหัส ไม่พบคืน null'), M(`public List<${cls}> getAll()`, 'ทุกแถว เรียงตามรหัส'),
+      M(`public List<${cls}> getAll(String where, String order)`, 'ใช้กับเงื่อนไขที่โปรแกรมกำหนดเท่านั้น'),
+      M(`public ${cls} save(${cls} obj)`, 'INSERT · รหัสว่างให้สร้างด้วย DatabaseHelper.nextId'), M(`public ${cls} update(${cls} obj)`, 'UPDATE ตามรหัส'),
+      M(`public int delete(${cls} obj)`, 'DELETE คืนจำนวนแถว (-1 = ผิดพลาด เช่นติด FK)')];
+  return { methods: base.concat(extras || []), count: `${base.length + (extras || []).length} เมธอด` + (composite ? ' · ไม่ implements Dao<T> (PK หลายคอลัมน์)' : ' · implements Dao<' + cls + '>') };
+}
+function serviceSpec(cls, extras, rules) {
+  const base = [M(`public List<${cls}> getAll()`, 'ให้หน้าจอโหลดตาราง'), M(`public ${cls} get(String id)`, 'ตอนคลิกแถว'),
+    M(`public List<${cls}> search(String keyword)`, 'กรองใน Java ไม่ต่อ SQL'), M(`public ${cls} add(${cls} x)`, 'ตรวจกฎแล้ว save'),
+    M(`public ${cls} edit(${cls} x)`, 'ตรวจกฎแล้ว update'), M('public boolean remove(String id)', 'false = ลบไม่ได้ (ติด FK)')];
+  return { methods: base.concat(extras || []), rules, count: `${base.length + (extras || []).length} เมธอด · ผิดกฎ throw IllegalArgumentException` };
+}
+function panelSpec(clsList, cls, extraComps) {
+  const comps = [];
+  clsList.forEach((k) => TABLES[k].cols.forEach((c) => {
+    if (clsList.length > 1 && k !== clsList[0] && /Id$/.test(c.field) && c.comp.startsWith('cmb')) return;
+    c.comp.split(' + ').forEach((n) => { if (!n.startsWith('(') && !comps.find((x) => x.name === n)) comps.push(C(n, (c.th || c.col) + (n.startsWith('btn') ? ' (เลือกไฟล์)' : ''))); });
+  }));
+  comps.push(C('btnNew', 'ล้างฟอร์มเพื่อเพิ่มใหม่'), C('btnSave', 'บันทึก (เพิ่ม/แก้)'), C('btnDelete', 'ลบ (ถามยืนยัน)'),
+    C('txtSearch', 'ช่องค้นหา'), C('btnSearch', 'ค้นหา'), C('scr' + cls, 'ห่อตาราง'), C('tbl' + cls, 'ตารางรายการ'));
+  (extraComps || []).forEach((x) => comps.push(x));
+  return { comps, count: `${comps.length} คอมโพเนนต์ · JPanel อยู่ใน MainFrame` };
+}
+
+// ---------- โมดูลตาราง (model + dao + service + panel) ----------
+function pmModule(o) {
+  o.models.forEach((cls) => addFile(cls + '.java', 'model', { tasks: o.daoTasks, desc: 'model ของตาราง ' + TABLES[cls].table, uses: [], spec: modelSpec(cls) }));
+  o.models.forEach((cls, i) => addFile(cls + 'Dao.java', 'dao', { tasks: o.daoTasks, desc: 'SQL ทั้งหมดของตาราง ' + TABLES[cls].table,
+    uses: [cls, 'DatabaseHelper'].concat(TABLES[cls].pk.length > 1 ? [] : ['Dao']), spec: daoSpec(cls, (o.daoExtras || {})[cls], TABLES[cls].pk.length > 1) }));
+  if (o.service) addFile(o.service + '.java', 'service', { tasks: o.daoTasks.concat(o.crudTasks || []), desc: 'กฎร้านของ' + o.th,
+    uses: o.models.map((c) => c + 'Dao').concat(o.serviceUses || []), spec: serviceSpec(o.models[0], o.serviceExtras, o.rules) });
+  if (o.panel) addFile(o.panel + '.java', 'ui', { tasks: o.uiTasks, desc: 'หน้าจอ CRUD ของ' + o.th, uses: [o.service, 'Theme'].concat(o.panelUses || []),
+    spec: o.panelSpec || panelSpec(o.models, o.models[0], o.panelExtra) });
+}
+
+pmModule({ th: 'สมาชิก', models: ['Member'], service: 'MemberService', panel: 'MemberPanel',
+  daoTasks: ['7-2|DAO,Service Customer'], crudTasks: ['7|CRUD Customer'], uiTasks: ['7-1|Customer UI'],
+  daoExtras: { Member: [M('public Member getByPhoneNo(String phoneNo)', 'POS ค้นสมาชิกด้วยเบอร์')] },
+  serviceExtras: [M('public Member findByPhoneNo(String phoneNo)', 'PaymentDialog เรียก'), M('public void addPoints(String memberId, double netAmount)', 'PosService เรียกตอนปิดบิล')],
+  rules: ['ชื่อห้ามว่าง', 'เบอร์ 10 หลักขึ้นต้น 0 และห้ามซ้ำ', 'คะแนนแก้จากหน้าจอไม่ได้'] });
+pmModule({ th: 'ผู้จัดจำหน่าย', models: ['Vendor'], service: 'VendorService', panel: 'VendorPanel',
+  daoTasks: ['12-1|DAO Service Supplier'], crudTasks: ['12|CRUD Supplier'], uiTasks: ['12-2|SupplierUI'],
+  daoExtras: { Vendor: [M('public Vendor getByName(String name)', 'กันชื่อซ้ำ')] }, rules: ['ชื่อห้ามว่าง', 'เบอร์ (ถ้ามี) 9–10 หลัก'] });
+pmModule({ th: 'สินค้า', models: ['Product'], service: 'ProductService', panel: 'ProductPanel',
+  daoTasks: ['2-1|DAO,Service Product'], crudTasks: ['2|CRUD Product'], uiTasks: ['2-2|Product UI'],
+  daoExtras: { Product: [M('public List<String> getProductTypes()', 'SELECT DISTINCT Product_Type'), M('public List<Product> findByType(String type)', 'กรองตามหมวด')] },
+  serviceExtras: [M('public List<String> getProductTypes()', 'ปุ่มหมวดในหน้า POS'), M('public List<Product> find(String type, String keyword)', 'การ์ดเมนูหน้า POS')],
+  rules: ['ชื่อห้ามว่าง', 'ราคา ≥ 0', 'รูปอยู่ที่ images/products/{Product_ID}.jpg'] });
+pmModule({ th: 'วัตถุดิบ', models: ['StockItem'], service: 'StockItemService', panel: 'StockItemPanel',
+  daoTasks: ['3-1|DAO,Service Stock'], crudTasks: ['3|CRUD Stock'], uiTasks: ['3-7|Stock UI'],
+  daoExtras: { StockItem: [M('public List<StockItem> getLowStock()', 'Current_Stock <= Reorder_Point'), M('public boolean deductByBom(String orderId)', 'UPDATE ลดสต็อกตาม BOM × จำนวนที่สั่ง')] },
+  serviceExtras: [M('public List<StockItem> getLowStock()', 'แจ้งเตือนหน้า Home/Stock'), M('public void deductByBom(String orderId)', 'PosService เรียกตอนชำระเงิน')],
+  rules: ['ชื่อและหน่วยห้ามว่าง', 'จำนวน ≥ 0 ทศนิยม 3 ตำแหน่ง'],
+  panelExtra: [C('chkShowLowStock', 'แสดงเฉพาะของใกล้หมด')] });
+pmModule({ th: 'พนักงานและบัญชีล็อกอิน', models: ['Employee', 'UserAccount'], service: 'EmployeeService', panel: 'EmployeePanel',
+  daoTasks: ['4-2|DAO,Service User'], crudTasks: ['4|CRUD User'], uiTasks: ['4-1|User UI'], serviceUses: [],
+  daoExtras: { UserAccount: [M('public UserAccount getByUsername(String username)', 'LoginService ของเปรมใช้ (ส่ง 7 พ.ย.)'), M('public UserAccount getByEmpId(String empId)', 'โหลดบัญชีของพนักงานที่เลือก')] },
+  serviceExtras: [M('public UserAccount saveAccount(UserAccount a)', 'เพิ่ม/แก้บัญชี · Username ห้ามซ้ำ')],
+  rules: ['Username ห้ามซ้ำ', 'Role = ผู้จัดการ / พนักงาน', 'Emp_Type = Full-time / Part-time', 'Salary_Base > 0'] });
+addFile('UserAccountService.java', 'service', { tasks: ['4|CRUD User'], desc: 'CRUD บัญชีล็อกอิน (แยกจาก LoginService ของเปรม)', uses: ['UserAccountDao'],
+  spec: serviceSpec('UserAccount', [], ['Username ห้ามซ้ำ', 'รหัสผ่านห้ามว่าง']) });
+pmModule({ th: 'เงินเดือน', models: ['Payroll'], service: 'PayrollService', panel: 'PayrollPanel',
+  daoTasks: ['5-2|DAO,Service salary'], crudTasks: ['5|CRUD salary'], uiTasks: ['5-1|UI salary'], serviceUses: ['EmployeeDao', 'WorkTimeDao'],
+  daoExtras: { Payroll: [M('public List<Payroll> findByEmpId(String empId)', 'ประวัติของคนเดียว')] },
+  serviceExtras: [M('public double calcTotal(Employee e, double ot, double deduction)', 'Salary_Base + OT − Deduction')],
+  rules: ['Total_Amount คำนวณเอง ไม่ให้พิมพ์', 'OT, Deduction ≥ 0'] });
+pmModule({ th: 'ค่าใช้จ่าย', models: ['Expense'], service: 'ExpenseService', panel: 'ExpensePanel',
+  daoTasks: ['6-4|DAO,Service Expenses'], crudTasks: ['6|CRUD Expenses'], uiTasks: ['6-3|Expense UI'], serviceUses: ['Session'],
+  daoExtras: { Expense: [M('public List<Expense> findByMonth(String yyyyMM)', 'สรุปรายเดือน')] },
+  serviceExtras: [M('public String copyReceipt(File source)', 'ก๊อปรูปไป images/receipts/yyyy-MM/ คืน path')],
+  rules: ['จำนวนเงิน > 0', 'Expense_Type = คงที่ / ผันแปร', 'Emp_ID = คนที่ล็อกอิน'] });
+pmModule({ th: 'บิล/ใบเสร็จ', models: ['Bill', 'BillProduct'], service: 'BillService', panel: 'BillPanel',
+  daoTasks: ['1-5|Receipt DAO,Service', '1-10|ReceiptDetail DAO'], crudTasks: ['1-6|Receipt CRUD', '1-9|ReceiptDetail CRUD'], uiTasks: ['1-7|ReceiptUI'],
+  panelUses: ['BillDetailDialog'],
+  daoExtras: { Bill: [M('public Bill getOpenByTableId(String tableId)', 'บิลที่ยังไม่จ่ายของโต๊ะ'), M('public List<Bill> findByDate(String date)', 'กรองตามวัน')],
+    BillProduct: [M('public List<BillLine> findLinesByOrderId(String orderId)', 'JOIN Product ได้ชื่อ+ราคา')] },
+  serviceExtras: [M('public List<BillLine> getLines(String orderId)', 'รายการในบิล'), M('public List<Bill> findByDate(String date)', 'หน้า BillPanel')],
+  rules: ['บิลที่จ่ายแล้วห้ามลบ/แก้ยอด', 'เงินทอนไม่เก็บ คำนวณเอา'],
+  panelSpec: { comps: [C('txtDate', 'วันที่ (yyyy-MM-dd)'), C('btnSearch', 'ค้นหาตามวัน'), C('scrBill', 'ห่อตาราง'), C('tblBill', 'รายการบิล (ดับเบิลคลิกเปิดรายละเอียด)'), C('lblSumTotal', 'ยอดรวมของวัน')], count: '5 คอมโพเนนต์ · หน้าดูอย่างเดียว ไม่มีฟอร์มแก้' } });
+addFile('BillLine.java', 'model', { tasks: ['1-10|ReceiptDetail DAO'], desc: 'แถวในบิล + ชื่อ/ราคาเมนู (ไม่ใช่ตาราง ได้จาก JOIN)', uses: [],
+  spec: { fields: [{ name: 'orderId', type: 'String', from: 'Bill_Product.Order_ID' }, { name: 'productId', type: 'String', from: 'Bill_Product.Product_ID' },
+    { name: 'productName', type: 'String', from: 'Product.Product_Name' }, { name: 'unitPrice', type: 'double', from: 'Product.Amount' }, { name: 'unit', type: 'int', from: 'Bill_Product.Unit' }],
+    methods: [M('public double getLineTotal()', 'unitPrice × unit')], count: '5 field · getLineTotal()' } });
+pmModule({ th: 'เวลาเข้า-ออกงาน', models: ['WorkTime'], service: 'WorkTimeService', panel: 'WorkTimePanel',
+  daoTasks: ['11-2|DAO,Service Atttendance'], crudTasks: ['11-1|Crud Attendance'], uiTasks: ['11|Atttendance UI'], serviceUses: ['Session', 'DateUtil'],
+  daoExtras: { WorkTime: [M('public List<WorkTime> findByEmpAndMonth(String empId, String yyyyMM)', 'ประวัติรายเดือน')] },
+  serviceExtras: [M('public WorkTime clockIn(String empId)', 'เข้างาน วันละครั้ง'), M('public WorkTime clockOut(String empId)', 'ออกงาน'), M('public double getHours(WorkTime w)', 'End − Entry')],
+  rules: ['1 คน 1 วัน 1 แถว', 'ออกงานได้เมื่อเข้างานแล้ว'],
+  panelSpec: { comps: [C('lblToday', 'วันนี้'), C('lblNow', 'นาฬิกา'), C('btnClockIn', 'เข้างาน'), C('btnClockOut', 'ออกงาน'), C('cmbEmployee', 'ผู้จัดการเลือกดูคนอื่น'), C('scrWorkTime', 'ห่อตาราง'), C('tblWorkTime', 'ประวัติเดือนนี้')], count: '7 คอมโพเนนต์ · ทุกคนเข้าได้' } });
+pmModule({ th: 'การตรวจนับสต็อก', models: ['CheckStock', 'CheckStockDetail'], service: 'CheckStockService', panel: null,
+  daoTasks: ['3-3|DAO,Service Checkstock', '3-4|CRUD CheckstockDetail'], crudTasks: ['3-2|DAO,Service CheckstockService', '3-5|CRUD Checkstock'], serviceUses: ['StockItemDao', 'DatabaseHelper'],
+  daoExtras: { CheckStockDetail: [M('public List<CheckStockDetail> findByCheckId(String checkId)', 'เปิดรอบเก่า')] },
+  serviceExtras: [M('public CheckStock startCheck(String empId)', 'สร้างรอบ + ก๊อป Current_Stock'), M('public void saveCount(String checkId, String stockItemId, double qty)', 'บันทึกที่นับได้'), M('public void confirm(String checkId)', 'อัปเดตสต็อกใน transaction')],
+  rules: ['System_Qty ก๊อปตอนเริ่มนับ', 'ยืนยันแล้วอัปเดตทุกตัวพร้อมกัน'] });
+addFile('CheckStockPanel.java', 'ui', { tasks: ['3-6|CheckstockUI'], desc: 'หน้าตรวจนับสต็อก', uses: ['CheckStockService', 'Theme'],
+  spec: { comps: [C('btnStartCheck', 'เริ่มรอบนับ'), C('scrCheckDetail', 'ห่อตาราง'), C('tblCheckDetail', 'วัตถุดิบ · ในระบบ · นับได้ · ส่วนต่าง'), C('btnConfirm', 'ยืนยันผลนับ'), C('btnPrint', 'พิมพ์รายการ')], count: '5 คอมโพเนนต์' } });
+
+// ---------- POS ----------
+pmModule({ th: 'โต๊ะ', models: ['DiningTable'], service: null, panel: null, daoTasks: ['1-3|DAO,Service POS'],
+  daoExtras: { DiningTable: [M('public boolean updateStatus(String tableId, String status)', 'เปิด/ปิดโต๊ะ'), M('public List<DiningTable> getVacant()', 'โต๊ะว่าง')] } });
+pmModule({ th: 'โปรโมชั่น', models: ['Promotion'], service: null, panel: null, daoTasks: ['1-3|DAO,Service POS'],
+  daoExtras: { Promotion: [M('public List<Promotion> getActive(String today)', 'โปรที่ใช้ได้วันนี้')] } });
+addFile('PosService.java', 'service', { tasks: ['1-3|DAO,Service POS'], desc: 'flow หน้าร้าน: เปิดโต๊ะ → สั่ง → ชำระเงิน',
+  uses: ['BillDao', 'BillProductDao', 'DiningTableDao', 'PromotionService', 'StockItemService', 'MemberService', 'DatabaseHelper', 'DateUtil'],
+  spec: { methods: [M('public Bill openTable(String tableId, int amountMember)', 'โต๊ะต้องว่าง · 1 ≤ คน ≤ Table_Size'),
+    M('public void addProduct(String orderId, String productId, int unit)', 'สั่งซ้ำ = บวก Unit · เหลือ 0 = ลบ'), M('public void removeProduct(String orderId, String productId)', 'ลบรายการ'),
+    M('public List<BillLine> getLines(String orderId)', 'รายการในบิล'), M('public double calcTotal(List<BillLine> lines)', 'ยอดรวม'),
+    M('public Bill checkout(String orderId, String paymentType, double received, String promotionId, String memberId)', 'ชำระเงินใน transaction'),
+    M('public static double round2(double v)', 'ทศนิยม 2 ตำแหน่ง')], count: '7 เมธอด', rules: ['ห้ามเปิดโต๊ะซ้ำ', 'รับเงินสดต้อง ≥ ยอดสุทธิ', 'ตัดสต็อกตอนจ่าย'] } });
+addFile('PromotionService.java', 'service', { tasks: ['1-3|DAO,Service POS'], desc: 'ตรวจเงื่อนไขและคิดส่วนลด', uses: ['PromotionDao', 'DateUtil'],
+  spec: { methods: [M('public List<Promotion> getActive()', 'ให้ PaymentDialog'), M('public double calcDiscount(String promotionId, Bill bill, double total)', '1 บิล 1 โปร · คนต้องครบ')], count: '2 เมธอด' } });
+addFile('ProductItemPanel.java', 'comp', { tasks: ['1-1|Product List,Item'], desc: 'การ์ดเมนู 1 ใบในหน้า POS (สร้างด้วยโค้ด)', uses: ['Theme'],
+  spec: { methods: [M('public ProductItemPanel(Product product, Consumer<Product> onAdd)', 'สร้างการ์ด')],
+    comps: [C('lblImage', 'รูปเมนู'), C('lblName', 'ชื่อเมนู'), C('lblPrice', 'ราคา'), C('btnAdd', 'ปุ่ม +')], count: '4 คอมโพเนนต์' } });
+addFile('OrderLinePanel.java', 'comp', { tasks: ['1-2|Order Panel'], desc: 'รายการ 1 แถวฝั่งขวาของ POS', uses: ['Theme'],
+  spec: { methods: [M('public OrderLinePanel(BillLine line, Runnable onPlus, Runnable onMinus, Runnable onRemove)', 'สร้างแถว')],
+    comps: [C('btnPlus', '+1'), C('lblQty', 'จำนวน'), C('btnMinus', '−1'), C('lblImage', 'รูป'), C('lblName', 'ชื่อ'), C('lblLineTotal', 'ราคารวมแถว'), C('btnRemove', 'ลบ')], count: '7 คอมโพเนนต์' } });
+addFile('OpenTableDialog.java', 'ui', { tasks: ['1-2|Order Panel'], desc: 'เลือกโต๊ะและจำนวนคนก่อนสั่ง', uses: ['PosService', 'DiningTableDao'],
+  spec: { methods: [M('public static Bill ask(Component parent)', 'เปิด dialog คืนบิลที่เปิดแล้ว หรือ null')],
+    comps: [C('cmbDiningTable', 'โต๊ะว่าง'), C('spnAmountMember', 'จำนวนคน'), C('btnOpen', 'เปิดโต๊ะ'), C('btnCancel', 'ยกเลิก')], count: '4 คอมโพเนนต์' } });
+addFile('PaymentDialog.java', 'ui', { tasks: ['1-2|Order Panel'], desc: 'ชำระเงิน · โปร · สมาชิก · เงินทอน', uses: ['PosService', 'PromotionService', 'MemberService', 'Theme'],
+  spec: { methods: [M('public static boolean show(Component parent, Bill bill)', 'true = จ่ายสำเร็จ')],
+    comps: [C('lblTotal', 'ยอดรวม'), C('txtMemberPhoneNo', 'เบอร์สมาชิก'), C('btnFindMember', 'ค้นสมาชิก'), C('lblMemberName', 'ชื่อสมาชิก'), C('cmbPromotion', 'โปร'),
+      C('lblDiscount', 'ส่วนลด'), C('lblNetAmount', 'ยอดสุทธิ'), C('cmbPaymentType', 'เงินสด / QR Code'), C('txtReceivedAmount', 'เงินที่รับ'), C('lblChange', 'เงินทอน'),
+      C('btnConfirm', 'ยืนยัน'), C('btnCancel', 'ยกเลิก')], count: '12 คอมโพเนนต์' } });
+addFile('PosPanel.java', 'ui', { tasks: ['1-4|UI Pos', '1-1|Product List,Item', '1-2|Order Panel', '1|CRUD POS'], desc: 'หน้าขายของตาม Figma',
+  uses: ['ProductService', 'PosService', 'ProductItemPanel', 'OrderLinePanel', 'OpenTableDialog', 'PaymentDialog', 'BillDetailDialog', 'Theme'],
+  spec: { comps: [C('pnlCategoryBar', 'แถบหมวด (ปุ่มสร้างจากข้อมูล)'), C('txtSearch', 'ค้นหาเมนู'), C('btnFilter', 'กรอง'), C('btnBack', '← เมนูหลัก'),
+    C('scrProductGrid', 'เลื่อนการ์ด'), C('pnlProductGrid', 'กริด 3 คอลัมน์'), C('pnlOrder', 'กล่องรายการอาหาร'), C('lblOrderTitle', 'หัวกล่อง'), C('scrOrderList', 'เลื่อนรายการ'),
+    C('pnlOrderList', 'รายการ (OrderLinePanel)'), C('lblItemCount', 'รวม n รายการ'), C('lblTotalTitle', 'คำว่า รวมเงิน'), C('lblTotal', 'ยอดรวม'), C('btnCheckout', 'ชำระเงิน'), C('btnPrintReceipt', 'พิมพ์ใบเสร็จ')],
+    methods: [M('private void loadProducts()', 'วาดการ์ดใหม่'), M('private void addToBill(Product p)', 'กด + บนการ์ด'), M('private void refreshOrder()', 'วาดรายการขวาใหม่')], count: '15 คอมโพเนนต์ · 3 เมธอดหลัก' } });
+
+// ---------- Login / Main / Dashboard / บิล ----------
+addFile('Session.java', 'helper', { tasks: ['10-1|DAO,Service Login'], desc: 'จำว่าใครล็อกอินอยู่', uses: [],
+  spec: { methods: [M('public static void login(UserAccount u, Employee e)', ''), M('public static void logout()', ''), M('public static UserAccount getUser()', ''),
+    M('public static Employee getEmployee()', ''), M('public static boolean isManager()', 'Role = ผู้จัดการ')], count: '5 เมธอด static' } });
+addFile('LoginService.java', 'service', { tasks: ['10-1|DAO,Service Login'], desc: 'ตรวจล็อกอิน', uses: ['UserAccountDao', 'EmployeeDao', 'Session'],
+  spec: { methods: [M('public UserAccount login(String username, String password, String role)', 'ถูกหมดเก็บลง Session · ผิดคืน null')], count: '1 เมธอด' } });
+addFile('LoginFrame.java', 'ui', { tasks: ['10|Login UI'], desc: 'หน้าแรก (JFrame)', uses: ['LoginService', 'MainFrame', 'Theme'],
+  spec: { comps: [C('pnlBrand', 'พื้นแดงซ้าย'), C('lblLogo', 'โลโก้'), C('lblShopName', 'โบนัสสุกี้'), C('lblSlogan', 'สโลแกน'), C('pnlLoginCard', 'การ์ดขาว'), C('lblWelcome', 'ยินดีต้อนรับ'),
+    C('lblInstruction', 'คำแนะนำ'), C('lblUsername', 'Username'), C('txtUsername', 'ช่อง Username'), C('lblPassword', 'Password'), C('txtPassword', 'ช่องรหัสผ่าน'),
+    C('tglManager', 'ผู้จัดการ'), C('tglEmployee', 'พนักงาน'), C('grpRole', 'กลุ่มปุ่ม role'), C('btnLogin', 'Login'), C('lblForgotPassword', 'Forgot Password')], count: '16 คอมโพเนนต์' } });
+addFile('MainFrame.java', 'ui', { tasks: ['1-5|Main Menu UI'], desc: 'หน้าต่างหลัก: sidebar + header + CardLayout',
+  uses: ['Session', 'Theme', 'LoginFrame', 'HomePanel', 'PosPanel', 'DashboardPanel', 'MemberPanel', 'VendorPanel', 'ProductPanel', 'StockItemPanel', 'CheckStockPanel', 'EmployeePanel', 'PayrollPanel', 'ExpensePanel', 'BillPanel', 'WorkTimePanel'],
+  spec: { comps: [C('pnlSidebar', 'แถบซ้าย'), C('lblSidebarLogo', 'โลโก้'), C('btnHome', 'เมนูหลัก'), C('btnPos', 'POS'), C('btnWorkTime', 'ลงเวลา'), C('btnDashboard', 'ผู้จัดการ'),
+    C('btnProduct', 'ผู้จัดการ'), C('btnStockItem', 'ผู้จัดการ'), C('btnCheckStock', 'ผู้จัดการ'), C('btnMember', 'ผู้จัดการ'), C('btnVendor', 'ผู้จัดการ'), C('btnEmployee', 'ผู้จัดการ'),
+    C('btnPayroll', 'ผู้จัดการ'), C('btnExpense', 'ผู้จัดการ'), C('btnBill', 'ผู้จัดการ'), C('btnLogout', 'ออกจากระบบ'), C('pnlHeader', 'แถบบน'), C('lblAvatar', 'รูป'),
+    C('lblUserName', 'ชื่อผู้ใช้'), C('lblUserRole', 'สถานะ'), C('pnlContent', 'CardLayout')],
+    methods: [M('private void showCard(String card, JButton active)', 'เปลี่ยนหน้า + ไฮไลต์ปุ่ม')], count: '21 คอมโพเนนต์ · ค่าคงที่ CARD_ 1 ตัวต่อหน้า' } });
+addFile('HomePanel.java', 'ui', { tasks: ['1-5|Main Menu UI'], desc: 'หน้าเมนูหลัก (สรุป + ของใกล้หมด)', uses: ['StockItemService', 'Session'],
+  spec: { comps: [C('lblGreeting', 'ทักทาย'), C('scrLowStock', 'ห่อรายการ'), C('tblLowStock', 'ของใกล้หมด')], count: '3 คอมโพเนนต์' } });
+addFile('ReportRow.java', 'model', { tasks: ['1-11|Add graph dataproduct mainmenu'], desc: 'label + value ของกราฟ', uses: [],
+  spec: { fields: [{ name: 'label', type: 'String', from: 'ผล SQL' }, { name: 'value', type: 'double', from: 'ผล SQL' }], count: '2 field' } });
+addFile('ReportDao.java', 'dao', { tasks: ['1-11|Add graph dataproduct mainmenu'], desc: 'SQL ของ Dashboard', uses: ['ReportRow', 'DatabaseHelper'],
+  spec: { methods: [M('public int getTotalOrders()', ''), M('public int getTotalCustomers()', ''), M('public double getTotalRevenue()', ''), M('public List<ReportRow> getMonthlySales(String year)', ''),
+    M('public List<ReportRow> getSalesByCategory()', ''), M('public List<ReportRow> getWeeklySales()', ''), M('public List<ReportRow> getPaymentTypeSummary()', '')], count: '7 เมธอด · SQL ในแท็บคู่มือ พาร์ท 6' } });
+addFile('ReportService.java', 'service', { tasks: ['1-11|Add graph dataproduct mainmenu'], desc: 'ส่งต่อข้อมูลกราฟ', uses: ['ReportDao'],
+  spec: { methods: [M('เมธอดชื่อเดียวกับ ReportDao ทั้ง 7 ตัว', 'แปลงเลขเดือน/วันเป็นภาษาไทย')], count: '7 เมธอด' } });
+addFile('DashboardPanel.java', 'ui', { tasks: ['1-11|Add graph dataproduct mainmenu'], desc: 'หน้า Dashboard (JFreeChart)', uses: ['ReportService', 'Theme'],
+  spec: { comps: [C('lblTotalOrdersValue', 'Total Orders'), C('lblTotalCustomersValue', 'Total Customers'), C('lblTotalRevenueValue', 'Total Revenue (฿)'), C('pnlMonthlyChart', 'กราฟเส้น'),
+    C('pnlCategoryChart', 'โดนัท'), C('pnlWeeklyChart', 'กราฟแท่ง'), C('pnlPaymentType', 'กล่องประเภทชำระ'), C('prgCash', 'เงินสด'), C('prgQr', 'QR Code')], count: '9 คอมโพเนนต์ · 3 กราฟ' } });
+addFile('BillDetailDialog.java', 'ui', { tasks: ['1-8|Receipt Dialog', '18|Receipt Detail Popup'], desc: 'รายละเอียดใบเสร็จ', uses: ['BillService'],
+  spec: { methods: [M('public BillDetailDialog(Frame owner, String orderId)', 'เปิดจาก BillPanel และ POS')],
+    comps: [C('lblOrderId', 'เลขบิล'), C('lblDate', 'วันที่'), C('lblTable', 'โต๊ะ'), C('lblMember', 'สมาชิก'), C('scrBillProduct', 'ห่อตาราง'), C('tblBillProduct', 'รายการ'),
+      C('lblTotal', 'ยอดรวม'), C('lblDiscount', 'ส่วนลด'), C('lblNet', 'สุทธิ'), C('lblReceived', 'รับเงิน'), C('lblChange', 'เงินทอน')], count: '11 คอมโพเนนต์' } });
+
+// ---------- ไฟล์กลาง / ฐานข้อมูล ----------
+addFile('DatabaseHelper.java', 'helper', { tasks: ['8|Database'], desc: 'เปิด connection SQLite + nextId', uses: [],
+  spec: { methods: [M('public static Connection getConnect()', 'เปิดครั้งเดียว + PRAGMA foreign_keys'), M('public static void close()', ''), M('public static String nextId(String table, String idColumn, String prefix, int digits)', 'รหัสถัดไป'),
+    M('public static Integer getNullableInt(ResultSet rs, String col)', ''), M('public static Double getNullableDouble(ResultSet rs, String col)', '')], count: '5 เมธอด · โค้ดเต็มในแท็บคู่มือ พาร์ท 4' } });
+addFile('DateUtil.java', 'helper', { tasks: ['8|Database'], desc: 'รูปแบบวันเวลาเดียวทั้งแอป', uses: [],
+  spec: { methods: [M('public static String today()', 'yyyy-MM-dd'), M('public static String nowTime()', 'HH:mm:ss'), M('public static String now()', 'yyyy-MM-dd HH:mm:ss')], count: '3 เมธอด' } });
+addFile('Dao.java', 'dao', { tasks: ['8|Database'], desc: 'interface ของ DAO ทุกตัว', uses: [],
+  spec: { methods: daoSpec('Member').methods.slice(0, 6).map((m) => M(m.sig.replace(/Member/g, 'T').replace('public ', ''), m.does)), count: '6 เมธอด · generic <T>' } });
+addFile('Theme.java', 'comp', { tasks: ['8|Database'], desc: 'สี/ฟอนต์จาก Figma', uses: [],
+  spec: { fields: [{ name: 'PRIMARY', type: 'Color', from: '#B30004' }, { name: 'PRIMARY_LIGHT', type: 'Color', from: '#FF5B5B' }, { name: 'BACKGROUND', type: 'Color', from: '#F2F2F2' },
+    { name: 'SURFACE', type: 'Color', from: '#FFFFFF' }, { name: 'TEXT', type: 'Color', from: '#1E1E1E' }, { name: 'BORDER', type: 'Color', from: '#D9D9D9' }],
+    methods: [M('public static String money(double v)', '"1,154.00 บาท"'), M('public static void stylePrimaryButton(JButton b)', ''), M('public static void styleSidebarButton(JButton b, boolean active)', '')], count: '6 ค่าสี · 3 เมธอด' } });
+addFile('ThaiFont.java', 'comp', { tasks: ['8|Database'], desc: 'ฟอนต์ไทยทั้งแอป (ลอกจาก MoogataLab)', uses: [], spec: { methods: [M('public static void apply()', 'เรียกใน main')], count: '1 เมธอด' } });
+addFile('BonusSuki.java', 'root', { tasks: ['10|Login UI'], desc: 'main: LookAndFeel → ThaiFont → LoginFrame', uses: ['ThaiFont', 'LoginFrame'], spec: { methods: [M('public static void main(String[] args)', '')], count: '1 เมธอด' } });
+addFile('bonus_suki_sqlite.sql', 'sql', { tasks: ['8|Database', '9|Crud Database'], desc: 'CREATE TABLE 18 ตาราง', uses: [], spec: { count: '15 ตารางจากรูปเล่ม + 3 ตารางเสริม' } });
+addFile('bonus_suki.db', 'sql', { tasks: ['8|Database', '9|Crud Database'], desc: 'ไฟล์ฐานข้อมูล (ไม่ commit)', uses: [], spec: { count: 'สร้างจาก sql/' } });
+
+// ตารางที่ยังไม่มีเจ้าของในชีท
+['Bom', 'StockImport', 'LotDetail'].forEach((cls) => {
+  addFile(cls + '.java', 'model', { tasks: [], desc: 'ยังไม่มีงานในชีท', uses: [], spec: modelSpec(cls) });
+  addFile(cls + 'Dao.java', 'dao', { tasks: [], desc: 'ยังไม่มีงานในชีท', uses: [cls, 'DatabaseHelper'], spec: daoSpec(cls, [], TABLES[cls].pk.length > 1) });
+});
+
+// ---------- ค้นหา ----------
+const PM_BY_NAME = {};
+PM_FILES.forEach((f) => { PM_BY_NAME[f.name.replace(/\.(java|sql|db)$/, '')] = f; f.key = f.name.replace(/\.(java|sql|db)$/, ''); });
+PM_FILES.forEach((f) => { f.usedBy = PM_FILES.filter((g) => g.uses.includes(f.key)).map((g) => g.key); });
+function pmFilesForTask(taskId, title) {
+  const norm = (s) => String(s || '').replace(/\s+/g, ' ').trim();
+  const key = norm(taskId) + '|' + norm(title);
+  return PM_FILES.filter((f) => f.tasks.includes(key));
+}
 
 </script>
 <script>
@@ -2778,6 +3076,8 @@ function guideFor(taskId, module) {
     }
     box.appendChild(note);
 
+    const owned = pmFilesForTask(t.id, t.title);
+    if (owned.length) box.appendChild(specSection(t, owned));
     const steps = el('div', 'steps');
     t.guide.steps.forEach((s, i) => {
       const done = !!st.checks[t.guide.key + '--' + s.id];
@@ -2797,8 +3097,8 @@ function guideFor(taskId, module) {
       const btn = el('button', 'tick', done ? '✓ ผ่านแล้ว (กดเพื่อยกเลิก)' : 'ผ่าน checkpoint นี้แล้ว');
       btn.type = 'button';
       btn.setAttribute('aria-pressed', String(done));
-      btn.disabled = !st.db;
-      if (!st.db) btn.title = 'ต้องล็อกอิน claude.ai และมีสิทธิ์ใช้งานหน้านี้';
+      btn.disabled = !st.db && !st.local && !st.sb;
+      if (btn.disabled) btn.title = 'ต้องล็อกอิน claude.ai และมีสิทธิ์ใช้งานหน้านี้';
       btn.addEventListener('click', () => toggle(t, s, !done, btn));
       cp.append(w, btn);
       body.appendChild(cp);
@@ -2809,6 +3109,13 @@ function guideFor(taskId, module) {
     if (p.pct === 100) box.appendChild(el('div', 'finish', 'งานนี้ผ่านครบทุก checkpoint แล้ว · อย่าลืมวางลิงก์ commit ในชีท'));
   }
   function sheetNote(t, p) {
+    if (st.sb) {
+      const w = st.writing[t.guide.key];
+      if (w === 'saving') return 'กำลังบันทึก…';
+      if (w === 'error') return 'บันทึกไม่สำเร็จ ลองกดใหม่';
+      return 'บันทึกในฐานข้อมูลทีม (Supabase) · ส่งลง Google Sheet ตอนจบงาน';
+    }
+    if (st.local) return 'บันทึกไว้ในเบราว์เซอร์เครื่องนี้ ไม่ได้ส่งลงชีท';
     if (!t.row) return 'ไม่ได้เชื่อมชีท % จะยังไม่ถูกบันทึกลงชีท';
     const w = st.writing[t.guide.key];
     if (w === 'saving') return 'กำลังบันทึกลงชีท…';
@@ -2819,7 +3126,16 @@ function guideFor(taskId, module) {
 
   // ---------- ติ๊ก checkpoint ----------
   async function toggle(t, s, done, btn) {
-    if (!st.db) return;
+    if (!st.db && !st.local && !st.sb) return;
+    if (st.sb) { sbToggle(t, s, done, btn); return; }
+    if (st.local) {
+      const key = t.guide.key + '--' + s.id;
+      if (done) st.checks[key] = true; else delete st.checks[key];
+      try { localStorage.setItem('bs-checks', JSON.stringify(st.checks)); } catch (e) {}
+      renderList();
+      renderGuide();
+      return;
+    }
     btn.disabled = true;
     const id = t.guide.key + '--' + s.id;
     try {
@@ -2892,6 +3208,7 @@ function guideFor(taskId, module) {
     const want = location.hash.slice(1);
     if (!st.hashUsed && want) {
       if (want === 'overview' || want === 'guide' || want === 'manual') { st.hashUsed = true; showTab({ guide: 'guidePage', manual: 'manualTab' }[want] || 'overview'); }
+      else if (want === 'map' || want.startsWith('f-')) { st.hashUsed = true; showTab('mapTab'); if (want.startsWith('f-')) { st.mapSel = want.slice(2); renderMap(); } }
       else if (want.startsWith('m-')) { st.hashUsed = true; showTab('manualTab'); if (window.bsManualOpen) window.bsManualOpen(want); }
       else {
         const byRow = /^r(\d+)$/.exec(want);   // ลิงก์ตรงไปงาน: #r<แถวในชีท>
@@ -2909,20 +3226,18 @@ function guideFor(taskId, module) {
   // ---------- แท็บ ----------
   function showTab(id) {
     document.querySelectorAll('.tab').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === id)));
-    $('overview').hidden = id !== 'overview';
-    $('guidePage').hidden = id !== 'guidePage';
-    $('manualTab').hidden = id !== 'manualTab';
+    ['overview', 'guidePage', 'mapTab', 'manualTab'].forEach((x) => { $(x).hidden = id !== x; });
     $('people').hidden = id === 'manualTab';
   }
   document.querySelectorAll('.tab').forEach((b) => b.addEventListener('click', () => {
     showTab(b.dataset.tab);
-    const tok = b.dataset.tab === 'overview' ? 'overview' : b.dataset.tab === 'manualTab' ? 'manual' : (st.current && st.current.guide ? st.current.guide.key : 'guide');
+    const tok = { overview: 'overview', manualTab: 'manual', mapTab: st.mapSel ? 'f-' + st.mapSel : 'map' }[b.dataset.tab] || (st.current && st.current.guide ? st.current.guide.key : 'guide');
     try { history.replaceState(null, '', '#' + tok); } catch (e) {}
   }));
   function setOwner(o) {
     st.owner = o;
     try { localStorage.setItem('bs-owner', o); } catch (e) {}
-    renderPeople(); renderList(); renderOverview();
+    renderPeople(); renderList(); renderOverview(); renderMap();
   }
 
   // ---------- ภาพรวมทีม (อ่านจากชีท) ----------
@@ -3044,14 +3359,204 @@ function guideFor(taskId, module) {
     if (!list.length) { const tr = el('tr'); const td = el('td', 'empty', 'ไม่พบงาน'); td.colSpan = 6; tr.appendChild(td); body.appendChild(tr); }
   }
 
+  // ---------- สเปกไฟล์ + ต่อกับใคร + แผนผัง ----------
+  const normKey = (id, title) => String(id || '').replace(/\s+/g, ' ').trim() + '|' + String(title || '').replace(/\s+/g, ' ').trim();
+  function taskByKey(key) { return st.tasks.find((x) => normKey(x.id, x.title) === key) || null; }
+  function ownerOf(file) {
+    const key = file.tasks[0];
+    if (!key) return { name: 'ยังไม่มีเจ้าของ', task: null, key: null };
+    const t = taskByKey(key);
+    return { name: (t && t.owner) || ownerFallback(key) || '—', task: t, key };
+  }
+  function pctOf(t) { return !t ? 0 : t.guide ? progressOf(t).pct : sheetProgress(t); }
+  function openTask(t) { if (t) select(t); }
+  function fileLabel(f) { return (f.pkg === 'sql' ? 'sql/' : f.pkg === 'root' ? '' : PKG[f.pkg] + '/') + f.name; }
+
+  function specBody(f) {
+    const box = el('div', 'spec');
+    box.appendChild(el('p', 'specdesc', f.desc + (f.spec.count ? ' · ' + f.spec.count : '')));
+    const table = (head, rows) => {
+      const wrap = el('div', 'tbox small'); const tb = el('table', 'ttable spect'); const tr = el('tr');
+      head.forEach((h) => tr.appendChild(el('th', null, h))); const th = el('thead'); th.appendChild(tr); tb.appendChild(th);
+      const body = el('tbody'); rows.forEach((r) => { const row = el('tr'); r.forEach((c, i) => { const td = el('td'); if (i < 2) td.appendChild(el('code', null, c)); else td.textContent = c; row.appendChild(td); }); body.appendChild(row); });
+      tb.appendChild(body); wrap.appendChild(tb); return wrap;
+    };
+    if (f.spec.fields && f.spec.fields.length) { box.appendChild(el('h5', null, 'field (' + f.spec.fields.length + ' ตัว)')); box.appendChild(table(['ชื่อ', 'ชนิด', 'มาจาก'], f.spec.fields.map((x) => [x.name, x.type, x.from]))); }
+    if (f.spec.methods && f.spec.methods.length) {
+      box.appendChild(el('h5', null, 'เมธอด (' + f.spec.methods.length + ' ตัว)'));
+      const ul = el('ul', 'meth'); f.spec.methods.forEach((m) => { const li = el('li'); li.appendChild(el('code', null, m.sig)); if (m.does) li.appendChild(el('span', null, m.does)); ul.appendChild(li); }); box.appendChild(ul);
+    }
+    if (f.spec.comps && f.spec.comps.length) { box.appendChild(el('h5', null, 'คอมโพเนนต์บนหน้าจอ (' + f.spec.comps.length + ' ตัว)')); box.appendChild(table(['ชื่อตัวแปร', 'ชนิด', 'คืออะไร'], f.spec.comps.map((x) => [x.name, x.type, x.what]))); }
+    if (f.spec.rules && f.spec.rules.length) { box.appendChild(el('h5', null, 'กฎที่ต้องเช็ก')); const ul = el('ul', 'meth'); f.spec.rules.forEach((r) => ul.appendChild(el('li', null, r))); box.appendChild(ul); }
+    return box;
+  }
+
+  function linkRow(name, why) {
+    const f = PM_BY_NAME[name];
+    const o = f ? ownerOf(f) : { name: '—', task: null };
+    const li = el('li', 'conn');
+    const b = el('button', 'connbtn');
+    b.type = 'button';
+    b.append(el('code', null, f ? f.name : name), el('span', 'who', o.name + (o.task ? ' · งาน ' + o.task.id + ' · ' + pctOf(o.task) + '%' : '')));
+    b.addEventListener('click', () => { if (f) { st.mapSel = f.key; showTab('mapTab'); renderMap(); try { history.replaceState(null, '', '#f-' + f.key); } catch (e) {} $('mapTab').scrollIntoView(); } });
+    li.appendChild(b);
+    if (why) li.appendChild(el('span', 'why', why));
+    return li;
+  }
+
+  function specSection(t, owned) {
+    const wrap = el('div', 'specwrap');
+    wrap.appendChild(el('h3', 'spech', 'ไฟล์ที่ต้องทำในงานนี้ (' + owned.length + ' ไฟล์)'));
+    owned.forEach((f, i) => {
+      const d = el('details', 'specfile'); d.open = i === 0;
+      const sm = el('summary'); sm.append(el('code', null, fileLabel(f)), el('span', 'cnt', f.spec.count || ''));
+      d.append(sm, specBody(f));
+      if (f.tasks.length > 1) d.appendChild(el('p', 'specdesc', 'ไฟล์นี้ทำร่วมกับงาน ' + f.tasks.filter((k) => k !== normKey(t.id, t.title)).map((k) => k.split('|')[0] + ' (' + ownerFallback(k) + ')').join(', ')));
+      wrap.appendChild(d);
+    });
+    const mine = owned.map((f) => f.key);
+    const deps = [...new Set(owned.flatMap((f) => f.uses))].filter((k) => !mine.includes(k));
+    const users = [...new Set(owned.flatMap((f) => f.usedBy))].filter((k) => !mine.includes(k));
+    const conn = el('div', 'conns');
+    const col = (title, note, list) => {
+      const c = el('div', 'conncol'); c.append(el('h4', null, title), el('p', 'specdesc', note));
+      const ul = el('ul', 'connlist');
+      if (!list.length) ul.appendChild(el('li', 'specdesc', '—'));
+      list.forEach((k) => ul.appendChild(linkRow(k)));
+      c.appendChild(ul); return c;
+    };
+    conn.append(col('ต้องใช้ของคนอื่น', 'ไฟล์เหล่านี้ต้องมีก่อน งานนี้ถึงจะ compile/รันได้ ถ้ายังไม่เสร็จให้ทักเจ้าของ', deps),
+      col('คนที่รอใช้ของเรา', 'ไฟล์ของเพื่อนที่เรียกใช้ไฟล์ในงานนี้ ชื่อคลาสและเมธอดต้องตรงตามสเปก', users));
+    wrap.appendChild(el('h3', 'spech', 'ต่อกับใคร'));
+    wrap.appendChild(conn);
+    return wrap;
+  }
+
+  const MAP_ORDER = ['ui', 'comp', 'service', 'dao', 'model', 'helper', 'root', 'sql'];
+  const MAP_TITLE = { ui: 'ui — หน้าจอ', comp: 'ui/component — ชิ้นส่วนหน้าจอ', service: 'service — กฎร้าน', dao: 'dao — SQL', model: 'model — ข้อมูล 1 แถว', helper: 'helper — ตัวช่วยกลาง', root: 'package หลัก', sql: 'sql/ — ฐานข้อมูล' };
+  function renderMap() {
+    const box = $('mapGroups');
+    if (!box) return;
+    box.replaceChildren();
+    MAP_ORDER.forEach((pkg) => {
+      const files = PM_FILES.filter((f) => f.pkg === pkg);
+      if (!files.length) return;
+      const g = el('div', 'mapgroup');
+      g.appendChild(el('h3', null, MAP_TITLE[pkg] + ' (' + files.length + ')'));
+      const list = el('div', 'mapfiles');
+      files.forEach((f) => {
+        const o = ownerOf(f);
+        const p = pctOf(o.task);
+        const b = el('button', 'mapfile' + (st.mapSel === f.key ? ' sel' : '') + (st.owner && o.name !== st.owner ? ' dim' : '') + (!f.tasks.length ? ' orphan' : ''));
+        b.type = 'button';
+        b.append(el('code', null, f.name), el('span', 'who', o.name));
+        const bar = el('span', 'mbar'); const fill = el('i', p >= 100 ? 'done' : ''); fill.style.width = p + '%'; bar.appendChild(fill); b.appendChild(bar);
+        b.addEventListener('click', () => { st.mapSel = f.key; try { history.replaceState(null, '', '#f-' + f.key); } catch (e) {} renderMap(); if (window.matchMedia('(max-width: 900px)').matches) $('mapDetail').scrollIntoView(); });
+        list.appendChild(b);
+      });
+      g.appendChild(list);
+      box.appendChild(g);
+    });
+    renderMapDetail();
+  }
+  function renderMapDetail() {
+    const box = $('mapDetail');
+    const f = st.mapSel && PM_BY_NAME[st.mapSel];
+    box.replaceChildren();
+    if (!f) { box.appendChild(el('div', 'empty', 'กดไฟล์ทางซ้ายเพื่อดูรายละเอียด')); return; }
+    const head = el('div', 'ghead');
+    head.append(el('span', 'pill', PKG[f.pkg] || f.pkg), el('h2', null, f.name), el('div', 'meta', 'com/example/bonussuki/' + fileLabel(f)));
+    box.appendChild(head);
+    const own = el('div', 'intro');
+    if (!f.tasks.length) own.textContent = 'ยังไม่มีงานในชีทที่สร้างไฟล์นี้ ต้องแบ่งงานให้ใครสักคน';
+    f.tasks.forEach((k, i) => {
+      const t = taskByKey(k);
+      const line = el('div', 'ownline');
+      line.appendChild(el('span', null, (i === 0 ? 'ผู้รับผิดชอบ: ' : 'ทำร่วมกับ: ') + ((t && t.owner) || ownerFallback(k)) + ' · งาน ' + k.split('|')[0] + ' ' + k.split('|')[1] + (t ? ' · ' + pctOf(t) + '%' : '')));
+      if (t) { const go = el('button', 'btn', 'เปิดไกด์งานนี้'); go.type = 'button'; go.addEventListener('click', () => openTask(t)); line.appendChild(go); }
+      own.appendChild(line);
+    });
+    box.appendChild(own);
+    box.appendChild(specBody(f));
+    const conn = el('div', 'conns');
+    const col = (title, list) => { const c = el('div', 'conncol'); c.appendChild(el('h4', null, title)); const ul = el('ul', 'connlist'); if (!list.length) ul.appendChild(el('li', 'specdesc', '—')); list.forEach((k) => ul.appendChild(linkRow(k))); c.appendChild(ul); return c; };
+    conn.append(col('ไฟล์นี้เรียกใช้ (' + f.uses.length + ')', f.uses), col('ไฟล์ที่เรียกใช้ไฟล์นี้ (' + f.usedBy.length + ')', f.usedBy));
+    box.appendChild(conn);
+  }
+
+  // ---------- Supabase (เว็บนอก Claude) ----------
+  // งานและ checkpoint อยู่ในฐานข้อมูล Supabase ของทีม · ตอนจบงานค่อยส่งทั้งหมดลง Google Sheet
+  async function sbFetch(path, opts) {
+    const cfg = window.BS_SUPABASE;
+    const res = await fetch(cfg.url + '/rest/v1/' + path, Object.assign({}, opts, {
+      headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json' }, (opts && opts.headers) || {}),
+    }));
+    if (!res.ok) throw new Error(res.status + ' ' + (await res.text()));
+    return res.status === 204 || res.status === 201 ? null : res.json();
+  }
+  async function sbLoad() {
+    const [tasks, checks] = await Promise.all([
+      sbFetch('tasks?select=sheet_row,task_id,title,detail,owner,status,progress,due_date,weight&order=sheet_row'),
+      sbFetch('checkpoints?select=guide_key,step&done=eq.true'),
+    ]);
+    st.tasks = tasks.map((r) => ({ row: r.sheet_row, id: r.task_id, weight: r.weight || 0, title: r.title, detail: r.detail, owner: r.owner,
+      status: r.status, sheetPct: r.progress == null ? '' : String(Number(r.progress)), due: r.due_date || '', guide: guideFor(r.task_id, r.title) }));
+    const next = {};
+    checks.forEach((c) => { next[c.guide_key + '--' + c.step] = true; });
+    st.checks = next;
+    st.sheetOk = true;
+    setSync('ok', 'เชื่อมฐานข้อมูลทีมแล้ว · อัปเดตล่าสุด ' + new Date().toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }));
+    renderPeople(); renderList(); renderOverview(); renderMap(); restore();
+  }
+  function startSupabase() {
+    showNotice('');
+    setSync('wait', 'กำลังโหลดจากฐานข้อมูลทีม…');
+    const run = () => sbLoad().catch((e) => setSync('bad', 'โหลดจากฐานข้อมูลทีมไม่สำเร็จ (' + String(e.message || e).slice(0, 60) + ')'));
+    run();
+    setInterval(() => { if (!document.hidden && !Object.values(st.writing).includes('saving')) run(); }, 30000);
+  }
+  async function sbToggle(t, s, done, btn) {
+    const key = t.guide.key;
+    btn.disabled = true;
+    st.writing[key] = 'saving';
+    renderGuide();
+    try {
+      await sbFetch('checkpoints', { method: 'POST', headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
+        body: JSON.stringify({ guide_key: key, step: s.id, task_row: t.row, done }) });
+      if (done) st.checks[key + '--' + s.id] = true; else delete st.checks[key + '--' + s.id];
+      const p = progressOf(t);
+      const cur = t.status || '';
+      const next = p.pct >= 100 ? 'Done' : p.pct > 0 ? 'Doing' : (cur === '' ? '' : 'To Do');
+      const patch = { progress: p.pct };
+      if (AUTO_STATUS.includes(cur) && next !== cur) patch.status = next;
+      await sbFetch('tasks?sheet_row=eq.' + t.row, { method: 'PATCH', headers: { Prefer: 'return=minimal' }, body: JSON.stringify(patch) });
+      t.sheetPct = String(p.pct);
+      if (patch.status !== undefined) t.status = patch.status;
+      st.writing[key] = 'ok';
+      setSync('ok', 'บันทึกล่าสุด ' + new Date().toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }));
+    } catch (e) {
+      st.writing[key] = 'error';
+      setSync('bad', 'บันทึกไม่สำเร็จ (' + String(e.message || e).slice(0, 60) + ')');
+    }
+    renderList(); renderGuide(); renderOverview(); renderMap();
+  }
+
   // ---------- เริ่ม ----------
   const use = (name) => (window.claude && window.claude.use ? window.claude.use(name) : Promise.resolve(null));
+  // นอก Claude (เช่นเว็บบน Cloudflare) ไม่มีฐานข้อมูลของทีม: จำ checkpoint ไว้ในเบราว์เซอร์เครื่องนี้แทน
+  if (!(window.claude && window.claude.use)) {
+    st.local = !window.BS_SUPABASE;
+    st.sb = !!window.BS_SUPABASE;
+    try { st.checks = JSON.parse(localStorage.getItem('bs-checks') || '{}') || {}; } catch (e) { st.checks = {}; }
+  }
   try { st.owner = localStorage.getItem('bs-owner') || ''; } catch (e) {}
   st.tasks = tasksFromMap();
-  renderPeople(); renderList(); renderOverview(); restore();
+  renderPeople(); renderList(); renderOverview(); renderMap(); restore();
 
   use('db').then((db) => {
-    if (!db) { showNotice('เว็บนี้เป็นเวอร์ชันอ่านอย่างเดียว ภาพรวมทีม การติ๊ก checkpoint และการบันทึก % ลงชีท ใช้ได้ในหน้าโปรเจกต์บน Claude ของทีม: https://claude.ai/artifact/CrKF6Ppxqr3DmdyRKPcHFC'); return; }
+    if (!db && st.sb) { startSupabase(); return; }
+    if (!db && st.local) { showNotice('เว็บนี้จำ checkpoint ไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น ไม่ส่งลงชีทและเพื่อนไม่เห็น ถ้าอยากให้ทั้งทีมเห็น % ใช้หน้าโปรเจกต์บน Claude: https://claude.ai/artifact/CrKF6Ppxqr3DmdyRKPcHFC'); renderList(); renderGuide(); return; }
+    if (!db) { showNotice('ล็อกอิน claude.ai ก่อนจึงจะติ๊ก checkpoint ได้ ตอนนี้อ่านไกด์ได้อย่างเดียว'); return; }
     st.db = db;
     db.collection('checks').onSnapshot((snap) => {
       const next = {};
@@ -3063,7 +3568,8 @@ function guideFor(taskId, module) {
   });
 
   use('mcp').then((mcp) => {
-    if (!mcp) { setSync('bad', 'อ่านอย่างเดียว · ไม่ได้เชื่อม Google Sheets'); return; }
+    if (!mcp && st.sb) return;
+    if (!mcp) { setSync('bad', 'ไม่ได้เชื่อม Google Sheets · checkpoint จำไว้ในเครื่องนี้'); return; }
     st.mcp = mcp;
     mcp.watchTool(SERVER, 'get_values', { spreadsheetId: SHEET_ID, range: RANGE }, (ev) => {
       if (ev.type === 'data') {
@@ -3073,12 +3579,12 @@ function guideFor(taskId, module) {
         st.sheetOk = true;
         const at = ev.result.cache ? new Date(ev.result.cache.storedAt) : new Date();
         setSync('ok', 'เชื่อมชีทแล้ว · อ่านล่าสุด ' + at.toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' }));
-        renderPeople(); renderList(); renderOverview(); restore();
+        renderPeople(); renderList(); renderOverview(); renderMap(); restore();
       } else {
         const code = ev.error && ev.error.code;
         setSync(ev.error && ev.error.retryable ? 'wait' : 'bad', sheetError(ev.error));
         if (['needs_reauth', 'server_not_connected', 'not_in_manifest', 'blocked_by_policy', 'approval_required'].includes(code)) {
-          st.tasks = tasksFromMap(); st.sheetOk = false; renderPeople(); renderList(); renderOverview(); restore();
+          st.tasks = tasksFromMap(); st.sheetOk = false; renderPeople(); renderList(); renderOverview(); renderMap(); restore();
         }
       }
     }, { refetchInterval: 60000 });
